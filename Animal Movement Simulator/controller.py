@@ -2,7 +2,7 @@ import sys
 import os
 from typing import List
 from model.interface import IWorldMap
-from model.core import MoveDirection, Vector2d # Import bezwzględny
+from model.core import MoveDirection, Vector2d
 from model.animal import Animal
 import time
 
@@ -11,12 +11,6 @@ class OptionsParser:
     def parse(args):
         enum_values = list(map(lambda x: x.value, MoveDirection))
         value_list = list(map(lambda arg: MoveDirection(arg) if arg in enum_values else exit(f'{arg} is not legal move specification'), args))
-        # value_list = []
-        # for arg in args:
-        #     try:
-        #         value_list.append(MoveDirection(arg))
-        #     except ValueError:
-        #         exit(f'{arg} is not legal move specification')
         return value_list
 
 class Simulation:
