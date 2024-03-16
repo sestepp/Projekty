@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from model.core import Vector2d, MoveDirection
 from model.interface import IWorldMap
